@@ -1,3 +1,4 @@
+YOLOv3: 训练自己的数据 https://blog.csdn.net/lilai619/article/details/79695109
 # Yolo-v3 and Yolo-v2 for Windows and Linux
 ### (neural network for object detection)
 
