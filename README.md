@@ -1,6 +1,6 @@
 # YOLOv3: 训练自己的数据 
 https://blog.csdn.net/lilai619/article/details/79695109
-# 训练过程
+# my训练过程
 * cd D:\darknet\scripts
 * python voc_label.py
 * type 2007_train.txt 2007_val.txt 2012_train.txt 2012_val.txt >> train_voc.txt
