@@ -1,14 +1,13 @@
 # YOLOv3: 训练自己的数据 
 https://blog.csdn.net/lilai619/article/details/79695109
 # 训练过程
-cd D:\darknet\scripts
-python voc_label.py
-type 2007_train.txt 2007_val.txt 2012_train.txt 2012_val.txt >> train_voc.txt
-cd D:\darknet\build\darknet\x64
-
-my_tiny-yolo-voc.cfg::max_batches = 80200
-darknet.exe detector train data/my_voc.data my_tiny-yolo-voc.cfg my_tiny-yolo-voc_init.weights
-darknet.exe detector test  data/my_voc.data my_tiny-yolo-voc.cfg backup/my_tiny-yolo-voc_40200.weights data/dog.jpg
+1. cd D:\darknet\scripts
+   python voc_label.py
+   type 2007_train.txt 2007_val.txt 2012_train.txt 2012_val.txt >> train_voc.txt
+2. cd D:\darknet\build\darknet\x64
+   my_tiny-yolo-voc.cfg::max_batches = 80200
+   darknet.exe detector train data/my_voc.data my_tiny-yolo-voc.cfg my_tiny-yolo-voc_init.weights
+   darknet.exe detector test  data/my_voc.data my_tiny-yolo-voc.cfg backup/my_tiny-yolo-voc_40200.weights data/dog.jpg
 # Yolo-v3 and Yolo-v2 for Windows and Linux
 ### (neural network for object detection)
 
