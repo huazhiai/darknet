@@ -1,4 +1,4 @@
-#YOLO3训练自己的单类model
+# YOLO3训练自己的单类model
 * YOLOv3：https://pjreddie.com/darknet/yolo/
 * 说明书：https://pjreddie.com/media/files/papers/YOLOv3.pdf
 * 今天Yolo Object Detector的作者发布了YOLOv3，看起来性能更好但速度有所牺牲。
