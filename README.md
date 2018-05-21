@@ -1,3 +1,17 @@
+#YOLO3训练自己的单类model
+* YOLOv3：https://pjreddie.com/darknet/yolo/
+* 说明书：https://pjreddie.com/media/files/papers/YOLOv3.pdf
+* 今天Yolo Object Detector的作者发布了YOLOv3，看起来性能更好但速度有所牺牲。
+* 大致使用方法见其他人对YOLOv2的blog，这里说一下训练单一class时的区别。
+* 一般我们训练的class都是1类，所以在cfg/yolov3.cfg里：
+*     把所有“classes=80”替换为1 (别忘了.data里也要改);
+*     把所有“filters=255”替换为18;
+* 原因：
+* 在YOLOv2的【Region】上面那层的filters=num*(cls+1+4)，所以按原来的算法filters=5*(1+1+4)=30
+* 但在YOLOv3里【region】替换成了3个【yolo】层，因其用了三个scale来预测bounding box，每个scale上预测三个box
+* 尽管每个【yolo】里num=9，但它们上一层filters=num*(cls+1+4)里num实际是3，原因见上一行
+* 例：默认yolov3.cfg里是Coco的80类，classes=80
+* 所以每个【yolo】层上面的filter数=3*(80+1+4)=255
 # YOLOv3: 训练自己的数据 
 https://blog.csdn.net/lilai619/article/details/79695109
 # my训练过程
