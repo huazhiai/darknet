@@ -3,7 +3,7 @@
 * darknet.exe partial cfg/extraction.cfg extraction.weights extraction.conv.weights 24
   提取分类器的卷积层
 * darknet.exe detector train data/my_voc.data cfg/yolo.cfg darknet19_448.conv.23
-  用提取的卷积层finetune
+  用提取的卷积层加上VOC或者coco数据finetune
 # YOLO3训练自己的单类model
 * YOLOv3：https://pjreddie.com/darknet/yolo/
 * 说明书：https://pjreddie.com/media/files/papers/YOLOv3.pdf
